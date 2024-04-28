@@ -1,0 +1,9 @@
+server:
+  port: 8088
+
+# By default, config server looks for GitHub repository for the configuration and use it.
+# Here we are trying to use the configuration from the files providing in the package itself. That's why we are using native
+# With this, It won't look for git repos, instead it will use provided configuration within this config server application.
+spring:
+  profiles:
+    active: native
