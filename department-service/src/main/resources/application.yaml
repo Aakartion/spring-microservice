@@ -1,11 +1,6 @@
-server:
-  port: 8081
-
 spring:
   application:
     name: department-service
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+  config:
+    import: "optional:config-server:http://localhost:8088"
+    # This optional means that, if the config server is not available then still the application will start. It won't fail.
